@@ -1,4 +1,4 @@
-def getPrimes(n):
+def get_primes(n):
     arr = []
     for i in range(2, n):
         for j in range(2, i):
@@ -9,5 +9,13 @@ def getPrimes(n):
     return arr
 
 
-print(getPrimes(20))
+print(get_primes(23))
+
+
+
+# camelCase js
+# PascalCase
+# CONSTCASE
+# snake_case python
+
 

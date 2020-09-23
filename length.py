@@ -15,7 +15,7 @@ def max_length(str):
             count = 0
             for let in word:
                 if let in string.ascii_letters:
-                    count +=1
+                    count += 1
                 else:
                     pass
             if max < count:
@@ -23,4 +23,4 @@ def max_length(str):
     return max
 
 
-print(max_length("pr#@$#@$@#$ivet, kak de####%#!!%!#%#%###la"))
+print(max_length("pr#@$#@$123431241223563426g@#$ivet, kak de####%#!!%!#%#%###la"))

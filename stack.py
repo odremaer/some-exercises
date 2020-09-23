@@ -11,15 +11,15 @@ class Stack():
         return self
 
     def push(self, *param):
-        self.k = 0
-        self.array = param[0]
-        while len(self.array) < self.size:
-            self.array.append(self.array[self.k])
-            self.k += 1
-        self.k = 0
+        k = 0
+        array = param[0]
+        while len(array) < self.size:
+            array.append(array[k])
+            k += 1
+        k = 0
 
-        for i in range(0, len(self.array)):
-            self._stack.append(self.array[i])
+        for i in range(0, len(array)):
+            self._stack.append(array[i])
         return self
 
     def getA(self):
@@ -33,7 +33,7 @@ class Stack():
 
 
 obj = Stack(5)
-obj.push([1,2,3]).getA().pop().push([4,5,6]).getA().pop()
+obj.push([1,2,3,4]).getA().pop().push([4,5,6]).getA().pop()
 
 # 1 2 3 4
 # 1 2 3 4 1 2 3 4 1 2

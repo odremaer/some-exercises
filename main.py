@@ -140,34 +140,34 @@
 # v.getB().getA().getB()
 
 
-class Stack():
-    def __init__(self, size):
-        self._stack = []
-        self.size = size
-
-    def pop(self):
-        # возвращает и удаляет последний элемент в списке
-        # print(pop)
-        print(self._stack[-1])
-        self._stack.pop()
-        return self
-
-    def push(self, *param):
-        self.k = 0
-        self.array = param[0]
-
-        while len(self.array) < self.size:
-            self.array.append(self.array[self.k])
-            self.k += 1
-        self.k = 0
-
-        for i in range(0, len(self.array)):
-            self._stack.append(self.array[i])
-        return self
-
-    def getA(self):
-        print(self._stack)
-        return self
+# class Stack():
+#     def __init__(self, size):
+#         self._stack = []
+#         self.size = size
+#
+#     def pop(self):
+#         # возвращает и удаляет последний элемент в списке
+#         # print(pop)
+#         print(self._stack[-1])
+#         self._stack.pop()
+#         return self
+#
+#     def push(self, *param):
+#         self.k = 0
+#         self.array = param[0]
+#
+#         while len(self.array) < self.size:
+#             self.array.append(self.array[self.k])
+#             self.k += 1
+#         self.k = 0
+#
+#         for i in range(0, len(self.array)):
+#             self._stack.append(self.array[i])
+#         return self
+#
+#     def getA(self):
+#         print(self._stack)
+#         return self
 
 # class Hash(Stack):
 #     {
@@ -175,11 +175,27 @@ class Stack():
 #     }
 
 
-obj = Stack(5)
-obj.push([1,2,3]).getA().pop().pop().pop().getA()
+# obj = Stack(5)
+# obj.push([1,2,3]).getA().pop().pop().pop().getA()
 
 # 1 2 3 4
 # 1 2 3 4 1 2 3 4 1 2
 
 
+class Solution(object):
+    def findMaxConsecutiveOnes(self, nums):
+        max_length = 0
+        max = 0
+        for i in nums:
+            if i == 1:
+                max_length+=1
+            elif i == 0:
+                max_length = 0
+            if max < max_length:
+                max = max_length
 
+        return max
+
+
+obj = Solution()
+print(obj.findMaxConsecutiveOnes([1,1,0,0,1,1,1,1]))

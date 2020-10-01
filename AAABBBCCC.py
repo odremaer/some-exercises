@@ -11,4 +11,4 @@ def f(s):
 
 
 
-print(f("AAAAABBBBCCCCDDF"))
+print(f("ABBBBCCCCDDF"))

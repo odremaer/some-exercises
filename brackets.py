@@ -1,50 +1,20 @@
-# def brackets_check(str):
-#     b = 0
-#     b1 = 0
-#     b2 = 0
-#     for let in str:
-#         if let == '(':
-#             b += 1
-#         elif let == ')':
-#             b -= 1
-#
-#         if let == '[':
-#             b1 += 1
-#         elif let == ']':
-#             b1 -= 1
-#
-#         if let == '{':
-#             b2 += 1
-#         elif let == '}':
-#             b2 -= 1
-#         print(b,b1,b2)
-#         if (b == 2) or (b1 == 2) or (b2 == 2):
-#             break
-#
-#     return True if (b == 0 and b1 == 0 and b2 == 0) else False
-#
-#
-#
-#
-#
-#
-# print(brackets_check('{[}]'))
+import collections
 
 
-# import collections
-#
-# def dictFromString(s):
-#     d = collections.defaultdict(int)
-#     for c in s:
-#         d[c]+=1
-#     print(d)
-#     return d
-#
-# def areAnagrams(a,b):
-#     return dictFromString(a) == dictFromString(b)
-#
-#
-# print(areAnagrams('privet','tevirps'))
+def dictFromString(s):
+    d = collections.defaultdict(int)
+    print(d)
+    for c in s:
+        d[c] = 1
+    print(d)
+    return d
+
+
+def areAnagrams(a, b):
+    return dictFromString(a) == dictFromString(b)
+
+
+print(areAnagrams('privet','tevirp'))
 
 
 # def generate(cur, open, closed, n):
@@ -57,7 +27,7 @@
 #     if closed < open:
 #         generate(cur + ')', open, closed + 1, n)
 #
-# 
+#
 # def parens(n):
 #     generate('',0,0,n)
 #
